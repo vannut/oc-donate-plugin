@@ -1,0 +1,18 @@
+{% set status = __SELF__.statusOverview %}
+{% set lastStatus = __SELF__.currentStatus %}
+
+<section class="donate-status-env">
+    {% if status.error %}
+
+        {{ status.error }}
+
+    {% else %}
+
+            <i class="material-icons">chevron_right</i>
+            {{ lastStatus.trid }}:
+            <div class="status-label status-{{ lastStatus.status }}">
+                {{ lastStatus.status }}
+            </div>
+            
+    {% endif %}
+</section>

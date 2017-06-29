@@ -1,0 +1,17 @@
+
+
+<section class="donate-env">
+    <form name="donateList" method="POST" action="/do_donate">
+        <input type="hidden" readonly="readonly" name="type" value="simple">
+        {% for amount in  __SELF__.amounts %}
+            <label>
+                <input type='radio' name='amount' required value="{{ amount }}">
+                € {{ amount }}
+            </label>
+        {% endfor %}
+        <button type="submit" class="button donate-button">
+            {{ __SELF__.property('button_label', 'Donate') }}
+        </button>
+
+    </form>
+</section>

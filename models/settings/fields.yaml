@@ -1,0 +1,21 @@
+fields:
+    mollie_api_key:
+        label: API key
+        type: text
+        placeholder: live_... or test_...
+        comment: You can find your live API-key within your mollie dashboard. It starts with either `live_` or `test_`
+    redirect_url:
+        label: Redirect URL
+        type: text
+        placeholder: https://my.domain.tld/donation/[uid]
+        comment: "This is the url in you domain where the customer is redirected to after completing the payment. Either successfull or un-successfull. Should be a fully quialified URL. The tag [uid] will be replaced with the Unique ID of this donation"
+    webhook_url:
+        label: Webhook URL
+        type: text
+        placeholder: https://my.domain.tld/donation_webhook
+        comment: The URL which the Mollie-server's will call to tell the status of the payment. Should be a FQDN, the plugin provides a `/donation_webhook` route.
+    payment_description:
+        label: Payment description
+        type: text
+        placeholder: "eg: Donation to my organisation"
+        comment: What should be the description of this payment?
