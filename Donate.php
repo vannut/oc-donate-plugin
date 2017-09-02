@@ -59,4 +59,23 @@ class Donate
     {
         return bin2hex(random_bytes(16));
     }
+
+
+    public function webhook($in)
+    {
+        $mollie = new \Mollie_API_Client;
+        $mollie->setApiKey(Settings::get('mollie_api_key'));
+
+        $payment = $mollie->payments->get($in['id']);
+
+        //update the status
+        DonationStatus::create([
+            'trid' => $payment->id,
+            'status' => $payment->status,
+        ]);
+
+        return ['thank you'];
+
+    }
+
 }
