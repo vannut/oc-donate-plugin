@@ -1,0 +1,7 @@
+{% set goal = __SELF__.goal %}
+<fieldset>
+    <legend>{{ goal.title }}</legend>
+
+    <progress value="{{goal.progress}}" max="100">{{goal.progress}} %</progress>
+
+</fieldset>

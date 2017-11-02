@@ -1,0 +1,13 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Goal
+form: $/vannut/donate/models/goal/fields.yaml
+modelClass: Vannut\Donate\Models\Goal
+
+create:
+    title: New Goal
+
+update:
+    title: Edit Goal

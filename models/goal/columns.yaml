@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title: Title
+    target:
+        label: Target amount
+        type: partial
+        path: ~/plugins/vannut/donate/models/general_partials/_amount.htm
+    complete:
+        type: Partial
+        sortable: false
+    nofPaidDonations:
+        label: nof Paid Donations
+        type: partial

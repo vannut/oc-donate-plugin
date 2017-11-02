@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    trid: Transaction ID
+    amount:
+        type: partial
+        path: ~/plugins/vannut/donate/models/general_partials/_amount.htm
+    status:
+        type: partial
+    created_at:
+        label: Created at
+    uuid:
+        label: Unique ID
+        invisible: true
+        searchable: true
+    email:
+        label: Email
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    goal:
+        label: Goal
+        relation: goal
+        select: title
+        searchable: true

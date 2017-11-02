@@ -5,6 +5,7 @@ namespace Vannut\Donate;
 use Vannut\Donate\Models\Settings;
 use Vannut\Donate\Models\Donation;
 use Vannut\Donate\Models\DonationStatus;
+use Vannut\Donate\Models\Goal;
 
 class Donate
 {
@@ -41,10 +42,23 @@ class Donate
 
         $payment = $mollie->payments->create($params);
 
+        // additional data
+        $email = $in['email'] ?? null;
+        $name = $in['name'] ?? null;
+        $goal = Goal::where('id', $in['goal'])->first();
+        $goal_id = ($goal)
+            ? $goal->id
+            : null;
+
+
         // store payment_id/transaction ID with the corresponding hash...
         Donation::create([
             'uuid' => $hash,
-            'trid' => $payment->id
+            'trid' => $payment->id,
+            'amount' => $amount,
+            'email' => $email,
+            'name' => $name,
+            'goal_id' => $goal_id
         ]);
         DonationStatus::create([
             'trid' => $payment->id,

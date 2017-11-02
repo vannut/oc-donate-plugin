@@ -1,0 +1,9 @@
+fields:
+    title:
+        label: Goal Title
+    target:
+        label: Target amount
+        type: number
+    description:
+        label: Description
+        type: textarea

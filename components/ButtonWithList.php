@@ -2,6 +2,7 @@
 
 namespace Vannut\Donate\Components;
 
+use Vannut\Donate\Models\Goal;
 
 class ButtonWithList extends \Cms\Classes\ComponentBase
 {
@@ -31,9 +32,34 @@ class ButtonWithList extends \Cms\Classes\ComponentBase
                  'description'       => 'What should be the label of the button?',
                  'default'           => 'Donate',
                  'type'              => 'string',
-            ]
+            ],
+            'goal' => [
+                 'title'             => 'Goal',
+                 'description'       => 'For which goal?',
+                 'placeholder'       => 'Leave blank for no-goal',
+                 'type'              => 'dropdown',
+            ],
         ];
     }
+
+    public function getGoalOptions()
+    {
+        $goals = Goal::orderBy('title', 'desc')->get();
+
+
+        $ret = $goals->keyBy('id')
+            ->transform(function ($item) {
+                return $item->title;
+            })
+            ->toArray();
+
+        return $ret;
+        dd($ret);
+        return $ret;
+
+
+    }
+
 
     public function amounts()
     {

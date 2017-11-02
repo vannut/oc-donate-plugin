@@ -1,0 +1,18 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Goals
+list: ~/plugins/vannut/donate/models/goal/columns.yaml
+modelClass: Vannut\Donate\Models\Goal
+recordUrl: vannut/donate/goals/update/:id
+showCheckboxes: true
+
+defaultSort:
+  column: title
+  direction: asc
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar

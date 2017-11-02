@@ -1,0 +1,20 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Transactions
+list: ~/plugins/vannut/donate/models/donations/columns.yaml
+modelClass: Vannut\Donate\Models\Donation
+recordUrl: vannut/donate/donations/update/:id
+showCheckboxes: true
+
+defaultSort:
+  column: title
+  direction: asc
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+    search:
+        prompt: Find donations

@@ -1,6 +1,7 @@
 <section class="donate-env">
     <form action="/do_donate" method="POST">
         <input type="hidden" readonly="readonly" name="type" value="simple">
+        <input type="hidden" readonly="readonly" name="goal" value="{{  __SELF__.property('goal', '')}}">
         <input type="hidden" readonly="readonly"
                 name="amount" value="{{ __SELF__.property('amount')}}">
 

@@ -1,0 +1,17 @@
+<?php
+    $done = floor($record->progress(0)/10);
+    $todo = 10 - $done;
+
+    echo '<code>[';
+    for($i=1; $i <= $done; $i++) {
+        echo '#';
+    };
+    echo '+';
+    for($i=1; $i < $todo; $i++) {
+        echo '-';
+    };
+    echo ']</code>';
+
+?>
+
+<?php echo $record->progress(0); ?>%

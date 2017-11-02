@@ -1,0 +1,15 @@
+{
+  "name": "vannut/oc-donate",
+  "type": "october-plugin",
+  "description": "OctoberCMS plugin to be able to receive donations via Mollie. With goals!",
+  "homepage": "https://vannut.nl",
+  "authors": [
+    {
+      "name": "Richard Verbruggen",
+      "email": "Richard@vannut.nl"
+    }
+  ],
+  "require": {
+    "mollie/mollie-api-php": "1.9.*"
+  }
+}

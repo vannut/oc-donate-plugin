@@ -3,6 +3,7 @@
 <section class="donate-env">
     <form name="donateList" method="POST" action="/do_donate">
         <input type="hidden" readonly="readonly" name="type" value="simple">
+        <input type="hidden" readonly="readonly" name="goal" value="{{  __SELF__.property('goal', '')}}">
         {% for amount in  __SELF__.amounts %}
             <label>
                 <input type='radio' name='amount' required value="{{ amount }}">
