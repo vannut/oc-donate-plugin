@@ -1,5 +1,5 @@
 {
-  "name": "vannut/oc-donate",
+  "name": "vannut/oc-donate-plugin",
   "type": "october-plugin",
   "description": "OctoberCMS plugin to be able to receive donations via Mollie. With goals!",
   "homepage": "https://vannut.nl",
