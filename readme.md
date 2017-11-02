@@ -56,6 +56,3 @@ But off course you could always look into the source to see the exact builtup. O
 ### Custom implementations
 Under the hood there is a `/do_donate` route which accepts a 'amount'-parameter as a POST request.
 If you somehow sent  that parameter to that route, it will automatically redirect you to Mollie. This can come in handy if you would like to extend an existing form or something.
-
-### Meta data
-This plugin does not store any information about the plugin other that the transaction id `tr_...`, an unique id and its status over time. Through Mollie you would be able to retrieve more information about the donator (if given).
